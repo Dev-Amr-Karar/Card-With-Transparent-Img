@@ -1,0 +1,131 @@
+/* Start Global Rulls */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+.container {
+	margin: auto;
+	padding: 50px 15px;
+	height: 100%;
+	width: 1170px;
+}
+
+/* End Global Rulls */
+
+section {
+	background-color: #eeeeee;
+	height: 100vh;
+}
+
+.card-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.card-box::after {
+	content: "A+";
+	position: absolute;
+	bottom: calc(-40px + 5px);
+	z-index: 2;
+	right: 17%;
+	font-size: 18px;
+	background: #3b74ba;
+	color: #fff;
+	padding: 10px;
+	border-radius: 3px;
+}
+
+.card-box img {
+	max-width: 18%;
+	position: absolute;
+	z-index: 2;
+	top: -18px;
+}
+
+.card-text {
+	background-color: #fff;
+	width: 800px;
+	text-align: center;
+	padding: 40px 30px;
+	position: absolute;
+	z-index: 1;
+	bottom: -18px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+
+.card-text h1 {
+	letter-spacing: -1px;
+	color: #3b74ba;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.card-text p {
+	color: #999;
+}
+
+hr {
+	background-color: #ddd;
+	height: 1.5px;
+	border: none;
+	margin: 15px 0 20px;
+}
+
+.card-text > div {
+	width: 100%;
+	background-color: #f6f6f6;
+	margin-bottom: 10px;
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+}
+
+.card-text > div:last-child {
+	margin-bottom: 0;
+}
+
+.card-text > div span {
+	color: #333;
+	display: flex;
+	align-items: center;
+}
+
+.card-text > div span i {
+	color: #3b74ba;
+	margin-right: 10px;
+}
+
+.card-text > div a {
+	text-decoration: none;
+	color: #333;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s;
+}
+
+.card-text > div a:hover {
+	color: #3b74ba;
+}
