@@ -13,7 +13,24 @@ body {
 	margin: auto;
 	padding: 50px 15px;
 	height: 100%;
-	width: 1170px;
+}
+
+@media (min-width: 768px) {
+	.container {
+		width: 750px;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+		width: 970px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		width: 1170px;
+	}
 }
 
 /* End Global Rulls */
@@ -21,51 +38,51 @@ body {
 section {
 	background-color: #eeeeee;
 	height: 100vh;
+	width: 100%;
+	padding: 60px 0;
 }
 
-.card-box {
+.container {
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
-	height: 100%;
-	position: relative;
-}
-
-.card-box::after {
-	content: "A+";
-	position: absolute;
-	bottom: calc(-40px + 5px);
-	z-index: 2;
-	right: 17%;
-	font-size: 18px;
-	background: #3b74ba;
-	color: #fff;
-	padding: 10px;
-	border-radius: 3px;
-}
-
-.card-box img {
-	max-width: 18%;
-	position: absolute;
-	z-index: 2;
-	top: -18px;
 }
 
 .card-text {
-	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	width: 800px;
+	max-width: 95%;
+	position: relative;
+	padding-bottom: 30px;
+	background-color: #fff;
 	text-align: center;
-	padding: 40px 30px;
-	position: absolute;
-	z-index: 1;
-	bottom: -18px;
 	border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
+}
+
+.card-text img {
+	width: 120px;
+	max-width: 100%;
+	position: absolute;
+	top: -106px;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+}
+
+@media (max-width: 410px) {
+	.card-text img {
+		width: 70px;
+		top: -61px;
+	}
 }
 
 .card-text h1 {
@@ -83,14 +100,15 @@ hr {
 	background-color: #ddd;
 	height: 1.5px;
 	border: none;
-	margin: 15px 0 20px;
+	margin: 15px auto 20px;
+	width: calc(100% - 60px);
 }
 
 .card-text > div {
-	width: 100%;
+	width: calc(100% - 60px);
 	background-color: #f6f6f6;
 	margin-bottom: 10px;
-	padding: 15px;
+	padding: 15px 30px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -101,6 +119,13 @@ hr {
 	-o-border-radius: 3px;
 }
 
+@media (max-width: 410px) {
+	.card-text > div {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
 .card-text > div:last-child {
 	margin-bottom: 0;
 }
@@ -109,6 +134,7 @@ hr {
 	color: #333;
 	display: flex;
 	align-items: center;
+	font-weight: bold;
 }
 
 .card-text > div span i {
@@ -124,6 +150,12 @@ hr {
 	-moz-transition: 0.3s;
 	-ms-transition: 0.3s;
 	-o-transition: 0.3s;
+}
+
+@media (max-width: 410px) {
+	.card-text > div a {
+		margin-top: 15px;
+	}
 }
 
 .card-text > div a:hover {
