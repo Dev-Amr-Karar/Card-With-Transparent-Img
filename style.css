@@ -45,13 +45,19 @@ section {
 .container {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+}
+
+@media (max-width: 410px) {
+	.container {
+		align-items: center;
+	}
 }
 
 .card-text {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	height: fit-content;
 	width: 800px;
 	max-width: 95%;
 	position: relative;
@@ -89,7 +95,7 @@ section {
 	letter-spacing: -1px;
 	color: #3b74ba;
 	font-weight: bold;
-	margin-bottom: 5px;
+	margin: 0 0 5px;
 }
 
 .card-text p {
